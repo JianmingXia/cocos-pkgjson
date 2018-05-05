@@ -1,6 +1,6 @@
 {
   "name": "cocos-pkgjson",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "a pkgJson tool, convert plist file to json data. It can be custom pkgLoader used directly ",
   "main": "pkgJson.js",
   "dependencies": {
@@ -16,7 +16,9 @@
   },
   "keywords": [
     "pkgJson",
-    "cocos2d-JS"
+    "cocos2d-JS",
+    "cocos2d-html5",
+    "_pkgJsonLoader"
   ],
   "author": "Ryoma",
   "license": "MIT"
