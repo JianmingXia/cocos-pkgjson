@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+
+<plist version="1.0">
+  <dict>
+    <key>animations</key>
+    <dict>
+      <key>shield</key>
+      <dict>
+        <key>delay</key>
+        <real>0.1</real>
+        <key>frames</key>
+        <array>
+          <string>shield_1.png</string>
+          <string>shield_2.png</string>
+          <string>shield_3.png</string>
+          <string>shield_4.png</string>
+          <string>shield_5.png</string>
+          <string>shield_6.png</string>
+        </array>
+      </dict>
+    </dict>
+    <key>properties</key>
+    <dict>
+      <key>spritesheets</key>
+      <array>
+        <string>shield.plist</string>
+      </array>
+      <key>format</key>
+      <integer>1</integer>
+    </dict>
+  </dict>
+</plist>

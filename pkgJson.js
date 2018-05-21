@@ -24,8 +24,8 @@ var pkgJson = {
             height: height || 0
         }
     },
-    parseFrameConfig: function (content) {
-        var dict = plist.parse(content);
+
+    _parseFrame: function(dict) {
         // init
         var res_frames = dict["frames"];
         var res_meta = dict["metadata"] || dict["meta"];
@@ -88,6 +88,25 @@ var pkgJson = {
             frames: frames,
             meta: meta
         };
+    },
+    /**
+     * content: Data to be parse
+     * type: type of parse
+     *      "frame": parse spriteFrame, default
+     */
+    parse: function (content, type = "frame") {
+        var dict = plist.parse(content);
+
+        switch (type) {
+            case "frame":
+                return this._parseFrame(dict);
+            default:
+                return dict;
+        }
+    },
+
+    parseFrameConfig: function (content) {
+        return this.parse(content);
     },
 
     _rectFromString: function (content) {

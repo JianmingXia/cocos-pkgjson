@@ -7,6 +7,13 @@ a pkgJson tool, convert plist file to json data. It can be custom pkgLoader used
 
 有这个想法写这个工具也是由于看到了这篇文章：[cc.spriteFrameCache 改造说明](http://www.cocos.com/docs/html5/v3/cc-spriteframecache/zh.html)，但是官方并没有提供pkgJson文件的生成方式，而且个人在生成pkgJson的同时，也在官方的原基础做了一次优化，生成的pkgJson一次到位，cc._pkgJsonLoader只负责将数据存储在cc.loader.cache中即可。
 
+## 作用
+### parse(content) || parse(content, "frame")
+parse spriteFrame
+
+### parse(content, other)(other !== "frame")
+parse plist content to json
+
 ## How to Use
 #### Node.js
 Install using npm:
@@ -23,7 +30,17 @@ const pkgJson = require('./cocos-pkgjson');
 // Here I use fs.readFileSync get .plist file content
 let content = fs.readFileSync("test.plist", "utf8");
 
-console.log(JSON.stringify(pkgJson.parseFrameConfig(content)));
+console.log(JSON.stringify(pkgJson.parse(content)));
+```
+
+```
+/**
+ * content: Data to be parse
+ * type: type of parse
+ *      "frame": parse spriteFrame, default
+ *      "other": only parse content to Json
+ */
+parse(content, type);
 ```
 
 String result:
