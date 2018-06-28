@@ -17,8 +17,7 @@
     "url": "https://github.com/JianmingXia/cocos-pkgjson"
   },
   "scripts": {
-    "test": "./node_modules/.bin/_mocha",
-    "cover": "./node_modules/.bin/istanbul cover _mocha"
+    "test": "./node_modules/.bin/_mocha"
   },
   "keywords": [
     "pkgJson",
