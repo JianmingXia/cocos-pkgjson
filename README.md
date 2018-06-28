@@ -25,7 +25,7 @@ npm i cocos-pkgjson
 Then require() the cocos-pkgjson module in your file:
 ```
 const fs = require('fs');
-const pkgJson = require('./cocos-pkgjson');
+const pkgJson = require('cocos-pkgjson');
 
 // Here I use fs.readFileSync get .plist file content
 let content = fs.readFileSync("test.plist", "utf8");
