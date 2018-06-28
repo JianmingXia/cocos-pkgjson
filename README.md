@@ -1,4 +1,6 @@
 # cocos-pkgjson
+[![Build Status](https://www.travis-ci.org/JianmingXia/cocos-pkgjson.svg?branch=master)](https://www.travis-ci.org/JianmingXia/cocos-pkgjson)
+
 ## English
 a pkgJson tool, convert plist file to json data. It can be custom pkgLoader used directly
 
